@@ -43,4 +43,4 @@ USER ${USER}
 #   current working directory)
 #     docker run nimiq/nodejs-client -v $(pwd)/nimiq.conf:/etc/nimiq/nimiq.conf --config=/etc/nimiq.conf
 # (- of course, you can combine and modify these options suitable to your needs)
-ENTRYPOINT [ "./protocol/clients/nodejs/nimiq" ]
+ENTRYPOINT ["sh", "./protocol/clients/nodejs/nimiq" ]
