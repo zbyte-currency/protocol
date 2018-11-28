@@ -22,10 +22,10 @@ WORKDIR ${DATA_PATH}
 USER ${USER}
 
 # Clone
-RUN git clone --branch ${BRANCH} https://github.com/nimiq-network/core.git core
+RUN git clone --branch ${BRANCH} https://github.com/zbyte-currency/protocol.git protocol
 
 # Build
-RUN cd core && yarn
+RUN cd protocol && yarn
 
 # Remove build tools
 USER root
@@ -43,4 +43,4 @@ USER ${USER}
 #   current working directory)
 #     docker run nimiq/nodejs-client -v $(pwd)/nimiq.conf:/etc/nimiq/nimiq.conf --config=/etc/nimiq.conf
 # (- of course, you can combine and modify these options suitable to your needs)
-ENTRYPOINT [ "./core/clients/nodejs/nimiq" ]
+ENTRYPOINT [ "./protocol/clients/nodejs/nimiq" ]
