@@ -95,15 +95,22 @@ GenesisConfig.CONFIGS = {
             new BlockHeader(
                 new Hash(null),
                 new Hash(null),
-                Hash.fromBase64('fNqaf98GZVkFrl29nFNUUUcbB4+m898OKH5bD7R6Vzo='),
-                Hash.fromBase64('H+/UTx+pcYX9oh6VdUXJfcdkP6fk792G4KpCRNHgvFw='),
+                Hash.fromBase64('knks1lKODAB59l8lWQxQ/KrciT8dlvpWN3giqLYKLZc='),
+                Hash.fromBase64('NFEIYbm9qbjUZyThe9K0W7B0qy3qigPEZ0d+C6extI8='),
                 BlockUtils.difficultyToCompact(1),
                 1,
-                1523727000,
-                137689,
+                1543428417,
+                250736,
                 BlockHeader.Version.V1),
-            new BlockInterlink([], new Hash(null)),
-            new BlockBody(Address.fromBase64('BBBBBBBBBBBBBBBBBBBBBBBBBBB='), [], BufferUtils.fromBase64(''))
+            new BlockInterlink(
+                [],
+                new Hash(null)
+            ),
+            new BlockBody(
+                Address.fromBase64('Fz11vsU8ePwIzs9qPXxz/+TylVs='),
+                [],
+                BufferUtils.fromBase64('c2F0b3NoaSBsZWdhY3kgaXMgaGVyZSB0byBzdGF5')
+            )
         )
     },
 

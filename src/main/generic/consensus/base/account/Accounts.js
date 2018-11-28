@@ -38,12 +38,14 @@ class Accounts extends Observable {
 
         const tree = await this._tree.synchronousTransaction();
         try {
-            const buf = BufferUtils.fromBase64(encodedAccounts);
-            const count = buf.readUint16();
-            for (let i = 0; i < count; i++) {
-                const address = Address.unserialize(buf);
-                const account = Account.unserialize(buf);
-                tree.putSync(address, account);
+            if (encodedAccounts) {
+                const buf = BufferUtils.fromBase64(encodedAccounts);
+                const count = buf.readUint16();
+                for (let i = 0; i < count; i++) {
+                    const address = Address.unserialize(buf);
+                    const account = Account.unserialize(buf);
+                    tree.putSync(address, account);
+                }
             }
 
             await this._commitBlockBody(tree, genesisBlock.body, genesisBlock.height, new TransactionCache());

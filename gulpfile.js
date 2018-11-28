@@ -616,6 +616,6 @@ gulp.task('serve', ['watch'], function () {
     });
 });
 
-gulp.task('build', ['build-web', 'build-web-babel', 'build-web-istanbul', 'build-offline', 'build-offline-babel', 'build-loader', 'build-node', 'build-node-istanbul']);
+gulp.task('build', ['build-web', 'build-web-babel', 'build-offline', 'build-offline-babel', 'build-loader', 'build-node']);
 
 gulp.task('default', ['build', 'serve']);
